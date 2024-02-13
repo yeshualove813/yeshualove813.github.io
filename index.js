@@ -21,30 +21,30 @@ window.addEventListener('scroll', () => {
 let index = 0;
 
 const moveImage = (to) => {
-
-    console.log(`${index}`)
-
     if (isNaN(+to)) return;
-
     index = to - 1;
-
     images.style.left = `calc(1300px * -${index})`;
 }
 
 const nextImage = () => {
-    index = ++index % 4;
+    index = ++index % 5;
     moveImage(index + 1);
-    clearInterval(interval)
+    clearInterval(interval);
+    interval = getInterver();
 }
 
 const prevImage = () => {
-    index = --index % 4;
-    index = index < 0 ? 4 + index : index;
+    index = --index % 5;
+    index = index < 0 ? 5 + index : index;
     moveImage(index + 1);
+    clearInterval(interval);
+    interval = getInterver();
 }
 
-let interval = setInterval
+const getInterver = () => {
+    return setInterval(() => {
+        nextImage()
+    }, 10000)
+}
 
-interval(() => {
-    nextImage()
-}, 5000)
+let interval = getInterver()
