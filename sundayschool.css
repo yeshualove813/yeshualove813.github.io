@@ -94,7 +94,7 @@ a {
     float: left;
 }
 
-#images {
+#image {
     display: flex;
     left: 0;
     position: absolute;
