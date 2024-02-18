@@ -7,15 +7,6 @@ window.addEventListener('scroll', () => {
     } else {
         document.getElementById('btn-back-to-top').style.display = 'none';
     }
-    if (
-        document.documentElement.scrollTop > 750
-    ) {
-        document.getElementById('hiddenNavbarMenu').style.display = 'flex';
-        document.getElementById('navbar').style.display = 'none'
-    } else {
-        document.getElementById('hiddenNavbarMenu').style.display = 'none';
-        document.getElementById('navbar').style.display = 'flex'
-    }
 });
 
 let index = 0;
