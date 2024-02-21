@@ -42,6 +42,9 @@
         <div id="img-section">
             <div class="container" style="overflow: hidden;">
                 <div id="images">
+                    <a onclick="popup('bible_reading')" class="slider">
+                        <img src="assets/images/bible_reading/bible_reading.png">
+                    </a>
                     <a href="#예배안내" class="slider">
                         <img src="assets/images/wednesday.png">
                     </a>
@@ -65,11 +68,12 @@
             </div>
 
             <div id="btn">
-                <li class=".btn1" onclick="moveImage(1)" style="width: 10px;"></li>
-                <li class=".btn2" onclick="moveImage(2)" style="width: 10px;"></li>
-                <li class=".btn3" onclick="moveImage(3)" style="width: 10px;"></li>
-                <li class=".btn4" onclick="moveImage(4)" style="width: 10px;"></li>
-                <li class=".btn4" onclick="moveImage(5)" style="width: 10px;"></li>
+                <li onclick="moveImage(1)" style="width: 10px;"></li>
+                <li onclick="moveImage(2)" style="width: 10px;"></li>
+                <li onclick="moveImage(3)" style="width: 10px;"></li>
+                <li onclick="moveImage(4)" style="width: 10px;"></li>
+                <li onclick="moveImage(5)" style="width: 10px;"></li>
+                <li onclick="moveImage(6)" style="width: 10px;"></li>
             </div>
             <div id="next">
                 <button onclick="nextImage()">
@@ -92,7 +96,7 @@
             <li><a href="#교회소식" id="hover">교회소식</a></li>
             <li><a href="/sundayschool.html" id="hover">주일학교</a></li>
             <li><a href="#오시는길" id="hover">오시는길</a></li>
-            <li id="hover" onclick="popup()" style="color: rgb(167, 167, 167);  ">주보 보기</li>
+            <li id="hover" onclick="popup('jubo')" style="color: rgb(167, 167, 167);  ">주보 보기</li>
         </ul>
     </nav>
 
