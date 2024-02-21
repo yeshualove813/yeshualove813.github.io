@@ -18,15 +18,15 @@ const moveImage = (to) => {
 }
 
 const nextImage = () => {
-    index = ++index % 5;
+    index = ++index % 6;
     moveImage(index + 1);
     clearInterval(interval);
     interval = getInterver();
 }
 
 const prevImage = () => {
-    index = --index % 5;
-    index = index < 0 ? 5 + index : index;
+    index = --index % 6;
+    index = index < 0 ? 6 + index : index;
     moveImage(index + 1);
     clearInterval(interval);
     interval = getInterver();
@@ -40,8 +40,9 @@ const getInterver = () => {
 
 let interval = getInterver()
 
-function popup() {
+function popup(list) {
+    console.log(list)
     let options = "toolbar=no,scrollbars=no,resizable=yes,status=no,menubar=no,width=1200, height=800, top=0,left=0";
 
-    window.open("https://yeshua-love.org/jubo.html", "_blank", options)
+    window.open(`https://yeshua-love.org/${list}.html`, "_blank", options)
 }
